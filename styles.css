@@ -110,10 +110,12 @@ li {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	width: 220px;
 }
 
 .contact-info__block--center {
 	justify-content: center;
+	align-items: center;
 }
 
 .contact-info__item {
