@@ -222,7 +222,7 @@ li {
 	color: var(--primary-text-color);
 	text-decoration-color: var(--text-decoration-color);
 	text-align: left;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .addictional-info__header i {
 	font-style: normal;
@@ -320,4 +320,11 @@ li {
 
 .additional-info__languages-item {
 	color: var(--secondary-text-color);
+}
+
+.additional-info__lang-level {
+	display: inline-block;
+	width: 60px;
+	color: var(--text-decoration-color);
+	font-weight: bold;
 }
