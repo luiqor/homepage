@@ -18,6 +18,11 @@ body {
 	--text-decoration-color: #ff9a00;
 }
 
+li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 30px;
@@ -34,6 +39,16 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.f {
+	display: flex;
+	flex-direction: row;
+}
+
+.half-size {
+	float: left;
+	width: 50%;
 }
 
 .undeline {
@@ -170,19 +185,6 @@ body {
 	justify-content: start;
 }
 
-.skills__block {
-	float: left;
-	width: 50%;
-}
-
-.skills-list {
-	list-style-type: none;
-}
-
-.skills-list li {
-	margin-bottom: 10px;
-}
-
 .skills-list li .fa {
 	margin-right: 5px;
 	width: 20px;
@@ -215,15 +217,19 @@ body {
 
 /* Experience and additional info styles */
 
-.experiences {
-	flex: 1 1 60%;
-	margin-right: 50px;
-}
-
-.experiences__header {
-	color: var(--secondary-text-color);
+.addictional-info__header {
+	display: flex;
+	color: var(--primary-text-color);
+	text-decoration-color: var(--text-decoration-color);
 	text-align: left;
 	margin-bottom: 20px;
+}
+.addictional-info__header i {
+	font-style: normal;
+}
+
+.experiences__company-header {
+	margin-bottom: 8px;
 }
 
 .experiences__company-header-durability {
@@ -233,16 +239,17 @@ body {
 	font-size: 15px;
 }
 
-.experiences__company-header-name {
+.experiences__company-header-position {
 	color: var(--primary-text-color);
-	text-decoration-color: var(--text-decoration-color);
-	text-decoration-line: underline;
 	text-align: left;
-	margin-bottom: 20px;
+}
+
+.experiences__project-main h3 {
+	margin-right: 10px;
 }
 
 .experiences__company-project {
-	margin-left: 15px;
+	margin-right: 40px;
 	margin-bottom: 25px;
 }
 
@@ -253,15 +260,23 @@ body {
 	font-size: 15px;
 }
 
-.experiences__company-project-name {
-	color: var(--primary-text-color);
-	text-align: left;
-	margin-bottom: 10px;
+.experiences__company-name {
+	color: var(--secondary-text-color);
 }
 
-.experiences__company-project-responsibilities {
+.experiences__company-project-name {
 	color: var(--secondary-text-color);
-	padding-left: 20px;
+}
+
+.experiences__company-project-results {
+	color: var(--secondary-text-color);
+}
+
+.experiences__company-project-results .fa {
+	margin-right: 5px;
+	width: 20px;
+	text-align: center;
+	color: var(--text-decoration-color);
 }
 
 .additional-info {
@@ -269,12 +284,6 @@ body {
 }
 
 .additional-info__education {
-	margin-bottom: 20px;
-}
-
-.additional-info__education-header {
-	color: var(--secondary-text-color);
-	text-align: left;
 	margin-bottom: 20px;
 }
 
