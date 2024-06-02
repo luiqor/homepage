@@ -464,3 +464,7 @@ li {
   top: calc(50% - var(--arrow-w) - var(--border-size));
   left: calc(-1 * var(--arrow-h) * 2 - 2.5 * var(--border-size));
 }
+
+.timeline__text {
+  margin-bottom: 10px;
+}
