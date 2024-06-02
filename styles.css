@@ -70,7 +70,7 @@ li {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <=576px) {
   .main-info,
   .contact_info_container {
     flex-direction: column;
@@ -182,54 +182,6 @@ li {
   text-align: justify;
 }
 
-.skills {
-  display: flex;
-  justify-content: start;
-}
-
-.skills-list li .fa {
-  margin-right: 5px;
-  width: 20px;
-  text-align: center;
-  color: var(--text-decoration-color);
-}
-
-.skills__header {
-  color: var(--secondary-text-color);
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.skills__sub-header {
-  display: flex;
-  color: var(--primary-text-color);
-  text-decoration-color: var(--text-decoration-color);
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.skills__sub-header i {
-  font-style: normal;
-}
-
-.skills__text {
-  color: var(--secondary-text-color);
-  text-align: justify;
-}
-
-/* Experience and additional info styles */
-
-.addictional-info__header {
-  display: flex;
-  color: var(--primary-text-color);
-  text-decoration-color: var(--text-decoration-color);
-  text-align: left;
-  margin-bottom: 10px;
-}
-.addictional-info__header i {
-  font-style: normal;
-}
-
 .experiences__company-header {
   margin-bottom: 8px;
 }
@@ -279,6 +231,55 @@ li {
   width: 20px;
   text-align: center;
   color: var(--text-decoration-color);
+}
+
+.skills {
+  display: flex;
+  justify-content: start;
+}
+
+.skills-list li .fa {
+  margin-right: 5px;
+  width: 20px;
+  text-align: center;
+  color: var(--text-decoration-color);
+}
+
+.skills__header {
+  color: var(--secondary-text-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skills__sub-header {
+  display: flex;
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.skills__sub-header i {
+  font-style: normal;
+}
+
+.skills__text {
+  color: var(--secondary-text-color);
+  text-align: justify;
+}
+
+/* Experience and additional info styles */
+
+.addictional-info__header {
+  display: flex;
+  color: var(--primary-text-color);
+  text-decoration-color: var(--text-decoration-color);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.addictional-info__header i {
+  font-style: normal;
 }
 
 .additional-info {
@@ -338,7 +339,7 @@ li {
   justify-content: space-between;
   position: relative;
 
-  &:after {
+  &::after {
     content: "";
     width: 99%;
     height: 3px;
@@ -354,7 +355,7 @@ li {
   position: relative;
   cursor: pointer;
 
-  &:after {
+  &::after {
     content: "";
     display: block;
     width: 12px;
@@ -366,7 +367,7 @@ li {
   }
 }
 
-.timeline__events-line li.active:after {
+.timeline__events-line li.active::after {
   background-color: var(--background-color);
 }
 
@@ -428,16 +429,15 @@ li {
   --border-size: 2px;
   --bubble-color: white;
   --border-color: #ff9a0045;
-}
-.speech-bubble {
+
   padding: 5px;
   position: relative;
   width: 100%;
   box-shadow: 0 0 0 var(--border-size) var(--border-color);
 }
 
-.speech-bubble:before,
-.speech-bubble:after {
+.speech-bubble::before,
+.speech-bubble::after {
   content: "";
   position: absolute;
   bottom: calc(-1 * var(--arrow-h) * 2 + 0.5px);
@@ -447,7 +447,7 @@ li {
   border-color: var(--bubble-color) transparent transparent;
 }
 
-.speech-bubble.l:after {
+.speech-bubble.l::after {
   border-color: transparent var(--bubble-color) transparent transparent;
   bottom: auto;
   border-width: var(--arrow-w) var(--arrow-h);
@@ -455,9 +455,8 @@ li {
   left: calc(-1 * var(--arrow-h) * 2 + 0.5px);
 }
 
-.speech-bubble.l:before {
-  border-width: calc(var(--arrow-w) + var(--border-size))
-    calc(var(--arrow-h) + var(--border-size));
+.speech-bubble.l::before {
+  border-width: calc(var(--arrow-w) + var(--border-size)) calc(var(--arrow-h) + var(--border-size));
   border-color: transparent var(--border-color) transparent transparent;
   bottom: auto;
   top: calc(50% - var(--arrow-w) - var(--border-size));
@@ -468,7 +467,7 @@ li {
   margin-bottom: 10px;
 }
 
-body {
+.hobbies__container {
   --pie-chart-color-1: #cae7b9;
   --pie-chart-color-2: #f3de8a;
   --pie-chart-color-3: #eb9486;
@@ -480,13 +479,11 @@ body {
   margin-right: 40px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: conic-gradient(
-    var(--pie-chart-color-1) 0% 30%,
-    var(--pie-chart-color-2) 30% 50%,
-    var(--pie-chart-color-3) 50% 70%,
-    var(--pie-chart-color-4) 70% 85%,
-    var(--pie-chart-color-5) 85% 100%
-  );
+  background: conic-gradient(var(--pie-chart-color-1) 0% 30%,
+      var(--pie-chart-color-2) 30% 50%,
+      var(--pie-chart-color-3) 50% 70%,
+      var(--pie-chart-color-4) 70% 85%,
+      var(--pie-chart-color-5) 85% 100%);
   border: var(--text-decoration-color) 3px solid;
 }
 
@@ -495,8 +492,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 80%;
-  margin: 40px 0px;
+  margin: 40px 0;
 }
+
 .hobbies li .fas {
   margin-right: 5px;
   width: 20px;
