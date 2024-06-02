@@ -48,7 +48,6 @@ li {
 }
 
 .half-size {
-  float: left;
   width: 50%;
 }
 
@@ -467,4 +466,63 @@ li {
 
 .timeline__text {
   margin-bottom: 10px;
+}
+
+body {
+  --pie-chart-color-1: #cae7b9;
+  --pie-chart-color-2: #f3de8a;
+  --pie-chart-color-3: #eb9486;
+  --pie-chart-color-4: #7e7f9a;
+  --pie-chart-color-5: #97a7b3;
+}
+
+.pie-chart {
+  margin-right: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--pie-chart-color-1) 0% 30%,
+    var(--pie-chart-color-2) 30% 50%,
+    var(--pie-chart-color-3) 50% 70%,
+    var(--pie-chart-color-4) 70% 85%,
+    var(--pie-chart-color-5) 85% 100%
+  );
+  border: var(--text-decoration-color) 3px solid;
+}
+
+.hobbies {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+  margin: 40px 0px;
+}
+.hobbies li .fas {
+  margin-right: 5px;
+  width: 20px;
+  padding: 5px;
+  padding-right: 22px;
+  text-align: center;
+  border-radius: 10px;
+  color: var(--primary-text-color);
+}
+
+.hobbies li:nth-child(1) .fas {
+  background-color: var(--pie-chart-color-1);
+}
+
+.hobbies li:nth-child(2) .fas {
+  background-color: var(--pie-chart-color-2);
+}
+
+.hobbies li:nth-child(3) .fas {
+  background-color: var(--pie-chart-color-3);
+}
+
+.hobbies li:nth-child(4) .fas {
+  background-color: var(--pie-chart-color-4);
+}
+
+.hobbies li:nth-child(5) .fas {
+  background-color: var(--pie-chart-color-5);
 }
